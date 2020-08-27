@@ -1,0 +1,994 @@
+###- Server & Steam Ports (All 3 ports must be unique per server instance).
+###- Server Ports
+server_port 27469
+steam_communications_port 45696
+steam_query_port 15876
+
+
+###- Server Settings
+
+server_name 【⑦】 | Seventh Coalition Campaign | EU/NA | Event Server 1 
+server_welcome_message Welcome to the Event!  Please follow the rules and have fun! 
+server_region europe
+server_admin_password CHAMP!(for NA) Chump.(for EU) 
+server_password 7th
+
+
+###- Server Intro Message
+
+server_intro_title <color=green>Seventh Coalition!</color>
+server_intro_body <br><br><color=red><size=14><b>RULES</b></size></color> <br><br><color=green>1.</color> Follow all rules. <color=red>[Located in the discord].</color> <br><br><color=green>2.</color> Use <color=blue>Recruitment Chat</color> to report any issues.
+
+
+
+###- Mods
+mods_installed 2133325553 #Marsh
+mods_installed 2134230566 #Alps
+mods_installed 2181931517 #Prussian Hills
+
+
+###- Bandwidth & Performance Settings
+
+network_broadcast_mode LowBandwidth
+
+#admin presets 
+admin_action_preset_reason FOL|Fire Out of Line. Please stand in line during this event.
+admin_action_preset_reason ROL|Reload Out of Line. Please reload in line during this event.
+admin_action_preset_reason FIC|Firing in Charge. Please do not fire in charge during this event.
+admin_action_preset_reason Crouching|No Firing or Reloading when crouched unless in double column.
+admin_action_preset_reason Join Line|You are not a line/group anymore. Please join a friendly line or charge.
+admin_action_preset_reason Spacing|Skirmishers must maintain at most 5 man spacing from each other.
+admin_action_preset_reason Artillery|Only the Cannoneers may interact with artillery devices.
+admin_action_preset_reason Cav Spacing|Dragoons/Cuirassiers must be in a group with 5 man spacing to fire.
+
+
+###- Global Gameplay & Map Settings
+
+artillery_fieldgun_respawn_timer 1200
+artillery_rocketlauncher_respawn_timer 1200
+map_rotation_start_randomise false
+
+
+###- Map Rotations
+ 
+#Rotation 1 = Aunby Valley [Army Battlefield] - STAGING - Calm Weather | Afternoon (17)
+!map_rotation start
+map_name aunbyvalley
+game_mode ArmyBattlefield
+game_type Hardcore
+round_time_minutes -1
+reinforcements_per_faction 9999
+wave_spawn_time_seconds -1
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 17
+time_dynamic false
+weather_preset fog
+weather_dynamic false
+friendly_fire false
+class_system_orders_reinforce_cooldown 10
+faction_attacking British
+faction_defending French
+!map_rotation end
+
+
+#Rotation 2 = Black Forest [Army Assault] - Rain | Night (18)
+!map_rotation start
+map_name Blackforest
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#RC Commands
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 0 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 0 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 0 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 0 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 0 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 0 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 0 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 0 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 3 = Tahir Desert [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name Egypt
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#RC Commands
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 4 = Ancient Plains [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name Ancientplains
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#RC Commands
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 5 = Desert Plains [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name Desertplains
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#RC Commands 
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 6 = Grassy Plains 1 [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name Grassyplains
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#RC Commands 
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 7 = Grassy Plains 2 [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name Grassyplainsii
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#RC Commands 
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 8 = Grassy Plains 3 [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name Grassyplainsiii
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#RC Commands 
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 9 = Snowy Plains 1 [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name Snowyplains
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#RC Commands 
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 10 = Snowy Plains 2 [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name Snowyplainsii
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#RC Commands 
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 11 = Snowy Plains 3 [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name Snowyplainsiii
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#RC Commands 
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 12 = Marsh [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name modmap
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#Mods
+load_mod 2133325553 #Marsh
+
+#RC Commands 
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 13 = Alps [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name modmap
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#Mods
+load_mod 2134230566 #Alps
+
+#RC Commands 
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
+
+
+#Rotation 14 = Prussian Hills [Army Assault] - Calm Weather | Morning (9)
+!map_rotation start
+map_name modmap
+game_mode ArmyAssault
+game_type Hardcore
+round_time_minutes 20
+round_spawn_close_timer_seconds 300
+faction_balancing false
+allow_faction_switching true
+allow_spectating true
+minimum_players -1
+maximum_players 200
+time_hour 7
+time_dynamic false
+weather_preset calm
+weather_dynamic false
+class_system_orders_reinforce_cooldown 300
+friendly_fire true
+faction_attacking British
+faction_defending French
+#Mods
+load_mod 2181931517 #Prussian Hills
+
+#RC Commands 
+rc delayed 1141 broadcast Live at 18:30!
+rc delayed 1111 broadcast Live!
+
+#Class Overrides
+spawn_override A ArmyInfantryOfficer 10
+spawn_override A ArmyLineInfantry 200
+spawn_override A Grenadier 200
+spawn_override A Guard 200
+spawn_override A FlagBearer 200
+spawn_override A Bagpiper 200
+spawn_override A Drummer 200
+spawn_override A Fifer 200
+spawn_override A Surgeon 200
+spawn_override A Sapper 10
+spawn_override A Hussar 8
+spawn_override A CuirassierDragoon 8
+spawn_override A LightInfantry 10
+spawn_override A Cannoneer 6
+spawn_override A Sapper 2
+
+spawn_override B ArmyInfantryOfficer 10
+spawn_override B ArmyLineInfantry 200
+spawn_override B Bagpiper 200
+spawn_override B Grenadier 200
+spawn_override B Guard 200
+spawn_override B FlagBearer 200
+spawn_override B Drummer 200
+spawn_override B Fifer 200
+spawn_override B Surgeon 200
+spawn_override B Sapper 2
+spawn_override B Hussar 8
+spawn_override B CuirassierDragoon 8
+spawn_override B LightInfantry 10
+spawn_override B Cannoneer 6
+
+# Weapon Override French
+starting_weapons_override French FlagBearer 3 4 Unarmed Sabre_AnXILight BearingFlag 
+starting_weapons_override French Drummer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Fifer 3 4 Unarmed Sabre_AnXILight 
+starting_weapons_override French Surgeon 3 4 Unarmed Sabre_AnXILight
+
+# Weapon Override British
+starting_weapons_override British FlagBearer 3 5 Unarmed Sword_Pattern1803FlankOfficer BearingFlag 
+starting_weapons_override British Drummer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Bagpiper 3 5 Unarmed Sword_Pattern1803FlankOfficer
+starting_weapons_override British Fifer 3 5 Unarmed Sword_Pattern1803FlankOfficer
+!map_rotation end
